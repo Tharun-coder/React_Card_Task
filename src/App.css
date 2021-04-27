@@ -1,0 +1,49 @@
+.container {
+  background-image: linear-gradient(to right, blue, skyblue);
+  margin-top: 20px;
+  /* letter-spacing: 1px; */
+}
+
+.card {
+  margin: 30px;
+  text-align: center;
+  padding: 10px;
+  transition: margin-top 1s;
+}
+
+.card .card-name {
+  color: gray;
+  font-size: 15px;
+}
+
+.card .card-price {
+  font-size: 60px;
+}
+
+.card .card-price-month {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card .card-info {
+  text-align: left;
+  padding: 0px 18px;
+}
+
+.card .card-info .cross {
+  color: rgb(204, 194, 194);
+}
+
+.card button {
+  letter-spacing: 1px;
+  background-color: rgb(49, 49, 211);
+  border-radius: 50px;
+}
+
+.card:hover {
+  margin-top: 20px;
+}
+
+.card:hover > button {
+  background-color: blue;
+}
