@@ -10,84 +10,19 @@ function Card(props) {
       </p>
       <hr></hr>
       <div className="card-info">
-        <p>
-          {props.card.user === "Single User" ? (
+        {props.card.offers.map((offer) => {
+          return (
             <>
-              <i className="fa fa-check" aria-hidden="true"></i>{" "}
-              {props.card.user}
+              <p className={offer.isEnabled ? "" : "text-muted"}>
+                <i
+                  className={offer.isEnabled ? "fa fa-check" : "fa fa-times"}
+                  aria-hidden="true"
+                ></i>{" "}
+                {offer.name}
+              </p>
             </>
-          ) : (
-            <>
-              <i className="fa fa-check" aria-hidden="true"></i>{" "}
-              <b>{props.card.user}</b>
-            </>
-          )}
-        </p>
-        <p>
-          <i className="fa fa-check" aria-hidden="true"></i>{" "}
-          {props.card.storage}
-        </p>
-        <p>
-          <i className="fa fa-check" aria-hidden="true"></i>{" "}
-          {props.card.projects}
-        </p>
-        <p>
-          <i className="fa fa-check" aria-hidden="true"></i>{" "}
-          {props.card.community}
-        </p>
-        {props.card.private.status === true ? (
-          <p>
-            <i className="fa fa-check" aria-hidden="true"></i>{" "}
-            {props.card.private.name}
-          </p>
-        ) : (
-          <p className="cross">
-            <i className="fa fa-times" aria-hidden="true"></i>{" "}
-            {props.card.private.name}
-          </p>
-        )}
-        {props.card.support.status === true ? (
-          <p>
-            <i className="fa fa-check" aria-hidden="true"></i>{" "}
-            {props.card.support.name}
-          </p>
-        ) : (
-          <p className="cross">
-            <i className="fa fa-times" aria-hidden="true"></i>{" "}
-            {props.card.support.name}
-          </p>
-        )}
-        {props.card.domain.status === true ? (
-          <p>
-            {props.card.domain.name.includes("Unlimited") ? (
-              <>
-                <i className="fa fa-check" aria-hidden="true"></i>{" "}
-                <b>{props.card.domain.name}</b>
-              </>
-            ) : (
-              <>
-                <i className="fa fa-check" aria-hidden="true"></i>{" "}
-                {props.card.domain.name}
-              </>
-            )}
-          </p>
-        ) : (
-          <p className="cross">
-            <i className="fa fa-times" aria-hidden="true"></i>{" "}
-            {props.card.domain.name}
-          </p>
-        )}
-        {props.card.reports.status === true ? (
-          <p>
-            <i className="fa fa-check" aria-hidden="true"></i>{" "}
-            {props.card.reports.name}
-          </p>
-        ) : (
-          <p className="cross">
-            <i className="fa fa-times" aria-hidden="true"></i>{" "}
-            {props.card.reports.name}
-          </p>
-        )}{" "}
+          );
+        })}
       </div>
       <button className="btn btn-primary">Buy</button>
     </div>

@@ -6,74 +6,116 @@ function App() {
     {
       name: "FREE",
       price: "$0",
-      user: "Single User",
-      storage: "5GB Storage",
-      projects: "Unlimited Public Projects",
-      community: "Community Access",
-      private: {
-        name: "Unlimited Private Projects",
-        status: false,
-      },
-      support: {
-        name: "Dedicated Phone Support",
-        status: false,
-      },
-      domain: {
-        name: "Free Subdomain",
-        status: false,
-      },
-      reports: {
-        name: "Monthly Status Reports",
-        status: false,
-      },
+      offers: [
+        {
+          name: "Single User",
+          isEnabled: true,
+        },
+        {
+          name: "5GB Storage",
+          isEnabled: true,
+        },
+        {
+          name: "Unlimited Public Projects",
+          isEnabled: true,
+        },
+        {
+          name: "Community Access",
+          isEnabled: true,
+        },
+        {
+          name: "Unlimited Private Projects",
+          isEnabled: false,
+        },
+        {
+          name: "Dedicated Phone Support",
+          isEnabled: false,
+        },
+        {
+          name: "Free Subdomain",
+          isEnabled: false,
+        },
+        {
+          name: "Monthly Status Reports",
+          isEnabled: false,
+        },
+      ],
     },
     {
       name: "PLUS",
       price: "$9",
-      user: "5 Users",
-      storage: "50GB Storage",
-      projects: "Unlimited Public Projects",
-      community: "Community Access",
-      private: {
-        name: "Unlimited Private Projects",
-        status: true,
-      },
-      support: {
-        name: "Dedicated Phone Support",
-        status: true,
-      },
-      domain: {
-        name: "Free Subdomain",
-        status: true,
-      },
-      reports: {
-        name: "Monthly Status Reports",
-        status: false,
-      },
+      offers: [
+        {
+          name: "5 Users",
+          isEnabled: true,
+        },
+        {
+          name: "50GB Storage",
+          isEnabled: true,
+        },
+        {
+          name: "Unlimited Public Projects",
+          isEnabled: true,
+        },
+        {
+          name: "Community Access",
+          isEnabled: true,
+        },
+        {
+          name: "Unlimited Private Projects",
+          isEnabled: true,
+        },
+        {
+          name: "Dedicated Phone Support",
+          isEnabled: true,
+        },
+        {
+          name: "Free Subdomain",
+          isEnabled: true,
+        },
+        {
+          name: "Monthly Status Reports",
+          isEnabled: false,
+        },
+      ],
     },
     {
       name: "PRO",
       price: "$49",
-      user: "Unlimited Users",
-      storage: "150GB Storage",
-      projects: "Unlimited Public Projects",
-      community: "Community Access",
-      private: {
-        name: "Unlimited Private Projects",
-        status: true,
-      },
-      support: {
-        name: "Dedicated Phone Support",
-        status: true,
-      },
-      domain: {
-        name: "Unlimited Free Subdomains",
-        status: true,
-      },
-      reports: {
-        name: "Monthly Status Reports",
-        status: true,
-      },
+      offers: [
+        {
+          name: "Unlimited Users",
+          isEnabled: true,
+        },
+        {
+          name: "150GB Storage",
+          isEnabled: true,
+        },
+        {
+          name: "Unlimited Public Projects",
+          isEnabled: true,
+        },
+        {
+          name: "Community Access",
+          isEnabled: true,
+        },
+        {
+          name: "Unlimited Private Projects",
+          isEnabled: true,
+        },
+        {
+          name: "Dedicated Phone Support",
+          isEnabled: true,
+        },
+        {
+          name: "Unlimited Free Subdomains",
+          isEnabled: true,
+        },
+        {
+          name: "Monthly Status Reports",
+          isEnabled: true,
+        },
+      ],
     },
   ];
 
